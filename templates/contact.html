@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+*{margin-top:10px;
+margin-bottom: 10px;
+margin-left: 10px;margin-right: 10px;}
+</style>
+<div class="container">
+    
+<form class="row g-3" method="post" action="contact">
+{% csrf_token %}
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4" name="email">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4" name="password">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input name="address" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input name="address2" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input name="city" type="text" class="form-control" id="inputCity">
+  </div>
+</div>
+ 
+ 
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>{% endblock body  %}
